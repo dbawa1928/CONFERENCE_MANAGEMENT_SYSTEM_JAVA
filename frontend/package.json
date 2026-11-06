@@ -1,0 +1,20 @@
+{
+  "name": "confsync-frontend",
+  "version": "1.0.0",
+  "description": "ConfSync - Smart Conference Management System (PBLJ Project)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "conference",
+    "management",
+    "java",
+    "spring-boot",
+    "mysql"
+  ],
+  "author": "ConfSync Team",
+  "license": "MIT"
+}
+

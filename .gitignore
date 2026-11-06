@@ -1,0 +1,41 @@
+# Compiled binaries and build artifacts
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven local wrapper / tools
+tools/
+.mvn/wrapper/maven-wrapper.jar
+
+# Local database and persistent files
+**/data/
+*.db
+*.mv.db
+*.trace.db
+
+# Uploaded user files & logs
+**/uploads/papers/*
+!**/uploads/papers/.gitkeep
+**/uploads/certificates/*
+!**/uploads/certificates/.gitkeep
+*.log
+
+# IDE and Editor files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
