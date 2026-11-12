@@ -3,7 +3,9 @@
  * Centralized fetch communication with Java Spring Boot backend (http://localhost:8080/api)
  */
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? (window.location.port === '5173' ? 'http://localhost:8080/api' : `${window.location.origin}/api`)
+    : `${window.location.origin}/api`;
 
 class ApiClient {
     constructor() {

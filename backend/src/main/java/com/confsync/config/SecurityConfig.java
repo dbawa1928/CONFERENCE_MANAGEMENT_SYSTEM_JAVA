@@ -79,6 +79,9 @@ public class SecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .headers(headers -> headers.frameOptions(frame -> frame.disable())) // For H2 console
             .authorizeHttpRequests(auth -> auth
+                // Public frontend web resources
+                .requestMatchers("/", "/index.html", "/css/**", "/js/**", "/favicon.ico", "/*.png", "/*.jpg", "/*.svg").permitAll()
+
                 // Public authentication & browsing endpoints
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/conferences/**").permitAll()
